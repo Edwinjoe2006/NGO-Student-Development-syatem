@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand">
+                Student Development Management System
+            </span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+
+    <div class="container mt-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <h1>
+                Students List
+            </h1>
+
+            <a href="/dashboard" class="btn btn-secondary">
+                Dashboard
+            </a>
+
+        </div>
+
+        <!-- Search Form -->
+
+        <form action="/search"
+              method="GET"
+              class="row g-3 mb-4">
+
+            <div class="col-md-8">
+                <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    placeholder="Search Student Name">
+            </div>
+
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100">
+                    Search
+                </button>
+            </div>
+
+            <div class="col-md-2">
+                <a href="/add_student"
+                   class="btn btn-success w-100">
+                    Add Student
+                </a>
+            </div>
+
+        </form>
+
+        <!-- Student Count -->
+
+        <div class="alert alert-info">
+            Total Students :
+            <strong>{{ students|length }}</strong>
+        </div>
+
+        <!-- Table -->
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover table-striped shadow">
+
+                <thead class="table-dark">
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Class</th>
+                        <th>Career Goal</th>
+                        <th width="220">Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for s in students %}
+
+                    <tr>
+
+                        <td>{{ s.id }}</td>
+                        <td>{{ s.name }}</td>
+                        <td>{{ s.age }}</td>
+                        <td>{{ s.gender }}</td>
+                        <td>{{ s.class_name }}</td>
+                        <td>{{ s.career_goal }}</td>
+
+                        <td>
+
+                            <a href="/student/{{ s.id }}"
+                               class="btn btn-primary btn-sm">
+                                View
+                            </a>
+
+                            <a href="/edit/{{ s.id }}"
+                               class="btn btn-warning btn-sm">
+                                Edit
+                            </a>
+
+                            <a href="/delete/{{ s.id }}"
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Delete Student?')">
+                                Delete
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

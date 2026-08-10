@@ -1,0 +1,119 @@
+body{
+    background: linear-gradient(135deg,#f5f7fa,#c3cfe2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar{
+    background: linear-gradient(90deg,#0f2027,#203a43,#2c5364) !important;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.navbar-brand{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.hero-section{
+    background: linear-gradient(135deg,#4e73df,#1cc88a);
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.hero-section img{
+    width:140px;
+}
+
+.card{
+    border:none;
+    border-radius:20px;
+    transition:0.4s;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.stat-card{
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.blue{
+    background:linear-gradient(135deg,#36d1dc,#5b86e5);
+}
+
+.green{
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+
+.red{
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+}
+
+.orange{
+    background:linear-gradient(135deg,#f7971e,#ffd200);
+    color:black;
+}
+
+.purple{
+    background:linear-gradient(135deg,#8e2de2,#4a00e0);
+}
+
+.sky{
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.btn{
+    border-radius:30px;
+    padding:10px 25px;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:#4e73df;
+}
+
+.table{
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.table thead{
+    background:#4e73df;
+    color:white;
+}
+
+.chart-card{
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.chart-header{
+    color:white;
+    padding:10px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.gender-header{
+    background:#4e73df;
+}
+
+.resource-header{
+    background:#1cc88a;
+}
+.card{
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 15px 25px rgba(0,0,0,0.2);
+}
